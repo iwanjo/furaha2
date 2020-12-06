@@ -56,6 +56,17 @@ flutter:
     - assets/welcome.png
     - assets/mhealth.png
     - assets/onboarding.png
+    - assets/search.png
+    - assets/phone.png
+    - assets/message.png
+    - assets/video-player.png
+    - assets/stress.png
+    - assets/anxiety.png
+    - assets/depression.png
+    - assets/nat.jpeg
+    - assets/james.jpeg
+    - assets/zuri.jpeg
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

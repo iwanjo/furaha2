@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furaha_application/variables.dart';
-import 'package:furaha_application/home.dart';
+import 'package:furaha_application/therapist_home.dart';
 
 class OnboardingScreen extends StatelessWidget {
   @override
@@ -21,7 +21,7 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height / 6,
+              top: MediaQuery.of(context).size.height / 7,
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width / 8,
@@ -30,34 +30,39 @@ class OnboardingScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Choose The Doctor\nYou Want',
+                      'Choose Your \nTherapist',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 32,
-                        color: kTitleTextColor,
+                        color: Colors.black,
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     Text(
-                      'Gain access to our comprehensive list\n of mental health professionals in the\n next page',
+                      'Gain access to our comprehensive list\nof mental health professionals in the\nnext page',
                       style: TextStyle(
                         fontSize: 16,
                         color: kTitleTextColor.withOpacity(0.7),
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     MaterialButton(
-                      onPressed: () {},
-                      color: kOrangeColor,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen()));
+                      },
+                      color: Colors.blue[400],
                       padding: EdgeInsets.symmetric(
                         horizontal: 30,
                       ),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
                         'Get Started',
@@ -66,6 +71,7 @@ class OnboardingScreen extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
+                      splashColor: Colors.white,
                     ),
                   ],
                 ),
