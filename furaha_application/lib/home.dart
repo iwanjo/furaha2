@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-
+import 'onboard.dart';
 import 'signup.dart';
 
 class Home extends StatelessWidget {
@@ -46,7 +46,12 @@ class Home extends StatelessWidget {
               fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         splashColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => OnboardingScreen()),
+          );
+        },
       ),
     );
 
