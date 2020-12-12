@@ -13,12 +13,12 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Choose ' + this._name)),
       body: SingleChildScrollView(
         child: Container(
-          width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/detail_illustration.png'),
+              image: AssetImage('assets/doctor.png'),
               alignment: Alignment.topCenter,
               fit: BoxFit.fitWidth,
             ),
@@ -35,11 +35,11 @@ class DetailScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
+                    // InkWell(
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //   },
+                    // ),
                   ],
                 ),
               ),
@@ -47,7 +47,6 @@ class DetailScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.24,
               ),
               Container(
-                width: double.infinity,
                 decoration: BoxDecoration(
                   color: kBackgroundColor,
                   borderRadius: BorderRadius.vertical(
@@ -63,7 +62,7 @@ class DetailScreen extends StatelessWidget {
                         children: <Widget>[
                           Image.asset(
                             _imageUrl,
-                            height: 120,
+                            height: 90,
                           ),
                           SizedBox(
                             width: 20,
@@ -101,6 +100,7 @@ class DetailScreen extends StatelessWidget {
                                     ),
                                     child: Image.asset(
                                       'assets/phone.png',
+                                      height: 20.0,
                                     ),
                                   ),
                                   SizedBox(
@@ -114,6 +114,7 @@ class DetailScreen extends StatelessWidget {
                                     ),
                                     child: Image.asset(
                                       'assets/message.png',
+                                      height: 20.0,
                                     ),
                                   ),
                                   SizedBox(
@@ -127,6 +128,7 @@ class DetailScreen extends StatelessWidget {
                                     ),
                                     child: Image.asset(
                                       'assets/video-player.png',
+                                      height: 20.0,
                                     ),
                                   ),
                                 ],
@@ -150,7 +152,8 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Dr. Stella is the top most heart surgeon in Flower\nHospital. She has done over 100 successful sugeries\nwithin past 3 years. She has achieved several\nawards for her wonderful contribution in her own\nfield. She’s available for private consultation for\ngiven schedules.',
+                        this._name +
+                            ' is highly experienced in clinical therapy with 5+ years of experience and a MSc in Psychological Studies from the University of British Columbia.',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),
@@ -160,7 +163,7 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Upcoming Schedules',
+                        'Schedule',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -172,9 +175,9 @@ class DetailScreen extends StatelessWidget {
                       ),
                       ScheduleCard(
                         'Consultation',
-                        'Sunday . 9am - 11am',
-                        '12',
-                        'Jan',
+                        'Tuesday 10AM - 11AM',
+                        '15',
+                        'Dec',
                         kBlueColor,
                       ),
                       SizedBox(
@@ -182,9 +185,9 @@ class DetailScreen extends StatelessWidget {
                       ),
                       ScheduleCard(
                         'Consultation',
-                        'Sunday . 9am - 11am',
-                        '13',
-                        'Jan',
+                        'Thursday 2PM - 3PM',
+                        '17',
+                        'Dec',
                         kYellowColor,
                       ),
                       SizedBox(
@@ -192,9 +195,9 @@ class DetailScreen extends StatelessWidget {
                       ),
                       ScheduleCard(
                         'Consultation',
-                        'Sunday . 9am - 11am',
-                        '14',
-                        'Jan',
+                        'Friday 8AM - 11AM',
+                        '18',
+                        'Dec',
                         kOrangeColor,
                       ),
                       SizedBox(

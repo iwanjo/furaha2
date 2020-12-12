@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Find Your Desired\nDoctor',
+                  'Find Your Specialist',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 32,
@@ -116,6 +116,11 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             width: 30,
           ),
+          CategoryCard(
+            'Grief & Loss',
+            'assets/pain.png',
+            kGreyColor,
+          ),
         ],
       ),
     );
@@ -148,9 +153,18 @@ class HomeScreen extends StatelessWidget {
           ),
           DoctorCard(
             'Dr. Zuri Walu',
-            'Depression - Northstar Clinic',
+            'Depression - North Hope ',
             'assets/zuri.jpeg',
             kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          DoctorCard(
+            'Emily Turner',
+            'L&G -  Shine Bright',
+            'assets/emily.jpg',
+            kGreyColor,
           ),
           SizedBox(
             height: 20,

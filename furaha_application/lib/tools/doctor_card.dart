@@ -6,6 +6,7 @@ class DoctorCard extends StatelessWidget {
   var _name;
   var _description;
   var _imageUrl;
+
   var _bgColor;
 
   DoctorCard(this._name, this._description, this._imageUrl, this._bgColor);

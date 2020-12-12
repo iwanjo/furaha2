@@ -66,6 +66,9 @@ flutter:
     - assets/nat.jpeg
     - assets/james.jpeg
     - assets/zuri.jpeg
+    - assets/doctor.png
+    - assets/pain.png
+    - assets/emily.jpg
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
