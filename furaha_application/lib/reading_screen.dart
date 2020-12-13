@@ -12,6 +12,20 @@ class SelectedReadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.only(left: 25, right: 25, bottom: 25),
+        height: 50,
+        color: kBlueColor,
+        child: FlatButton(
+          onPressed: () {},
+          child: Text(
+            'Add Content',
+            style: TextStyle(color: kWhiteColor),
+          ),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+        ),
+      ),
       appBar: AppBar(title: Text(this.popularBookModel.title)),
       body: SafeArea(
         child: Container(
@@ -22,7 +36,7 @@ class SelectedReadingScreen extends StatelessWidget {
                 expandedHeight: MediaQuery.of(context).size.height * 0.5,
                 flexibleSpace: Container(
                   height: MediaQuery.of(context).size.height * 0.5,
-                  // color: Color(popularBookModel.color),
+                  color: Color(popularBookModel.color),
                   child: Stack(
                     children: <Widget>[
                       Positioned(
@@ -44,7 +58,7 @@ class SelectedReadingScreen extends StatelessWidget {
                         child: Container(
                           margin: EdgeInsets.only(bottom: 60),
                           width: 230,
-                          height: 125,
+                          height: 250,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
@@ -132,7 +146,7 @@ class SelectedReadingScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 25, right: 25, bottom: 25),
                   child: Text(
                     this.popularBookModel.description,
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12, letterSpacing: 1.1),
                   ),
                 )
               ]))

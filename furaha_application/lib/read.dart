@@ -22,6 +22,23 @@ class _ReadScreenState extends State<ReadScreen> {
 
     return Scaffold(
       appBar: AppBar(title: Text("Read Our Content")),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 2,
+        items: [
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.book_online),
+            label: 'Book a Session',
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.book),
+            label: 'Read our content',
+          ),
+        ],
+      ),
       body: Container(
         child: ListView(
           physics: BouncingScrollPhysics(),
