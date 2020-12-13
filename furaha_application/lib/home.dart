@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:furaha_application/read.dart';
 import 'onboard.dart';
 import 'signup.dart';
 
@@ -70,7 +71,12 @@ class Home extends StatelessWidget {
               fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         splashColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ReadScreen()),
+          );
+        },
       ),
     );
 
@@ -115,6 +121,26 @@ class Home extends StatelessWidget {
             )
           ],
         ),
+
+        // Attempting to add bottom navigation
+
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.book_online),
+              label: 'Book a Session',
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.book),
+              label: 'Read our content',
+            ),
+          ],
+        ),
         body: Form(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(35),
@@ -130,6 +156,8 @@ class Home extends StatelessWidget {
                 moodJournal,
                 Padding(padding: EdgeInsets.only(top: 40.0)),
                 readArticle,
+
+                // attempting to add bottom navigation
               ],
             ),
           ),

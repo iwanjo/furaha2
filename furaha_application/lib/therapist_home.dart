@@ -8,6 +8,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Choose Your Therapist")),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        items: [
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.book_online),
+            label: 'Book a Session',
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.book),
+            label: 'Read our content',
+          ),
+        ],
+      ),
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         bottom: false,
