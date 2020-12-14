@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furaha_application/therapist_home.dart';
 import 'package:furaha_application/variables.dart';
+import 'package:furaha_application/about_nat.dart';
 
 class ScheduleCard extends StatelessWidget {
   var _title;
@@ -12,16 +13,27 @@ class ScheduleCard extends StatelessWidget {
   ScheduleCard(
       this._title, this._description, this._date, this._month, this._bgColor);
 
+  createAlertDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("Confirm Session Booking"),
+            content: Text("Session on " + _date + " " + _month),
+            actions: <Widget>[
+              FlatButton(onPressed: () {}, child: Text('Yes')),
+              FlatButton(onPressed: () {}, child: Text('No')),
+            ],
+            elevation: 24.0,
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomeScreen(),
-          ),
-        );
+        createAlertDialog(context);
       },
       child: DecoratedBox(
         decoration: BoxDecoration(
