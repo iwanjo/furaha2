@@ -1,21 +1,20 @@
 class PopularBookModel {
-  String title, author, price, image, description;
+  String title, author, image, description;
   int color;
 
-  PopularBookModel(this.title, this.author, this.price, this.image, this.color,
-      this.description);
+  PopularBookModel(
+      this.title, this.author, this.image, this.color, this.description);
 }
 
 List<PopularBookModel> populars = popularBookData
     .map((item) => PopularBookModel(item['title'], item['author'],
-        item['price'], item['image'], item['color'], item['description']))
+        item['image'], item['color'], item['description']))
     .toList();
 
 var popularBookData = [
   {
     "title": "Not Today #COVID 19",
     "author": "Dr. Natalie Wanjiru",
-    "price": "1499",
     "image": "assets/book1.jpeg",
     "color": 0xFFFFD3B6,
     "description":
@@ -24,7 +23,6 @@ var popularBookData = [
   {
     "title": "The New World Order",
     "author": "James Noko",
-    "price": "1299",
     "image": "assets/book2.jpeg",
     "color": 0xFF2B325C,
     "description":
@@ -33,7 +31,6 @@ var popularBookData = [
   {
     "title": "Calm Down",
     "author": "Ken Adams",
-    "price": "1999",
     "image": "assets/book3.jpg",
     "color": 0xFFFFE082,
     "description":
@@ -42,7 +39,6 @@ var popularBookData = [
   {
     "title": "Mental Health Matters",
     "author": "Dr. Zuri Walu",
-    "price": "899",
     "image": "assets/book4.jpg",
     "color": 0xFFA5D6A7,
     "description":
@@ -51,7 +47,6 @@ var popularBookData = [
   {
     "title": "Mental",
     "author": "Jamime Lowe",
-    "price": "799",
     "image": "assets/book5.jpg",
     "color": 0xFFB2DFDB,
     "description":
@@ -60,7 +55,6 @@ var popularBookData = [
   {
     "title": "It's Okay To Ask For Help",
     "author": "Emily Turner",
-    "price": "1099",
     "image": "assets/book6.jpg",
     "color": 0xFFC5CAE9,
     "description":

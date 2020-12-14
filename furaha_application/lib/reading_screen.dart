@@ -93,11 +93,7 @@ class SelectedReadingScreen extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        'Ksh ',
-                        style: TextStyle(color: kOrangeColor, fontSize: 15.0),
-                      ),
-                      Text(
-                        this.popularBookModel.price,
+                        'Read',
                         style: TextStyle(color: kOrangeColor, fontSize: 15.0),
                       ),
                     ],
@@ -124,7 +120,7 @@ class SelectedReadingScreen extends StatelessWidget {
                           Tab(
                             child: Container(
                               margin: EdgeInsets.only(right: 39.0),
-                              child: Text('Description'),
+                              child: Text('Content'),
                             ),
                           ),
                           Tab(

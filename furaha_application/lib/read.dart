@@ -229,7 +229,6 @@ class _ReadScreenState extends State<ReadScreen> {
                               SizedBox(
                                 height: 5,
                               ),
-                              Text('Ksh ' + populars[index].price),
                             ],
                           )
                         ],
