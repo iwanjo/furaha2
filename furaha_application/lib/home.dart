@@ -80,26 +80,6 @@ class Home extends StatelessWidget {
       ),
     );
 
-    final moodJournal = Material(
-      elevation: 6.0,
-      borderRadius: BorderRadius.circular(14.0),
-      color: Colors.blue[400],
-      child: MaterialButton(
-        hoverColor: Colors.black26,
-        minWidth: buttonSize.size.width / 0.9,
-        height: 100.0,
-        padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
-        child: Text(
-          'Access your Mood Journal',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-        splashColor: Colors.white,
-        onPressed: () {},
-      ),
-    );
-
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
@@ -150,11 +130,10 @@ class Home extends StatelessWidget {
                 logo,
                 Padding(padding: EdgeInsets.only(left: 100.0)),
                 signedInMessage,
-                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Padding(padding: EdgeInsets.only(top: 80.0)),
                 bookTherapy,
-                Padding(padding: EdgeInsets.only(top: 40.0)),
-                moodJournal,
-                Padding(padding: EdgeInsets.only(top: 40.0)),
+
+                Padding(padding: EdgeInsets.only(top: 60.0)),
                 readArticle,
 
                 // attempting to add bottom navigation

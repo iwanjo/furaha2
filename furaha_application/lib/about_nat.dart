@@ -176,7 +176,7 @@ class DetailScreen extends StatelessWidget {
                       ScheduleCard(
                         'Consultation',
                         'Tuesday 10AM - 11AM',
-                        '15',
+                        '22',
                         'Dec',
                         kBlueColor,
                       ),
@@ -186,7 +186,7 @@ class DetailScreen extends StatelessWidget {
                       ScheduleCard(
                         'Consultation',
                         'Thursday 2PM - 3PM',
-                        '17',
+                        '24',
                         'Dec',
                         kYellowColor,
                       ),
@@ -196,7 +196,7 @@ class DetailScreen extends StatelessWidget {
                       ScheduleCard(
                         'Consultation',
                         'Friday 8AM - 11AM',
-                        '18',
+                        '25',
                         'Dec',
                         kOrangeColor,
                       ),

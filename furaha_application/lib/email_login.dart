@@ -30,7 +30,6 @@ class _EmailLogInState extends State<EmailLogIn> {
       height: 120.0,
       width: 102.0,
     );
-    
 
     final welcomeMsg = Column(
       children: <Widget>[
@@ -112,7 +111,7 @@ class _EmailLogInState extends State<EmailLogIn> {
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-              )
+              ),
             ]))));
   }
 

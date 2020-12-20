@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furaha_application/confirmed_booking.dart';
 import 'package:furaha_application/therapist_home.dart';
 import 'package:furaha_application/variables.dart';
 import 'package:furaha_application/about_nat.dart';
@@ -21,8 +22,20 @@ class ScheduleCard extends StatelessWidget {
             title: Text("Confirm Session Booking"),
             content: Text("Session on " + _date + " " + _month),
             actions: <Widget>[
-              FlatButton(onPressed: () {}, child: Text('Yes')),
-              FlatButton(onPressed: () {}, child: Text('No')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ConfirmedScreen()));
+                  },
+                  child: Text('Yes')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
+                  child: Text('No')),
             ],
             elevation: 24.0,
           );
@@ -90,60 +103,5 @@ class ScheduleCard extends StatelessWidget {
         ),
       ),
     );
-
-    // return DecoratedBox(
-    //   decoration: BoxDecoration(
-    //     color: _bgColor.withOpacity(0.1),
-    //     borderRadius: BorderRadius.circular(10),
-    //   ),
-    //   child: Padding(
-    //     padding: EdgeInsets.all(10),
-    //     child: ListTile(
-    //       leading: Container(
-    //         padding: EdgeInsets.symmetric(
-    //           horizontal: 16,
-    //         ),
-    //         decoration: BoxDecoration(
-    //           color: _bgColor.withOpacity(0.3),
-    //           borderRadius: BorderRadius.circular(10),
-    //         ),
-    //         child: Column(
-    //           mainAxisAlignment: MainAxisAlignment.center,
-    //           children: <Widget>[
-    //             Text(
-    //               _date,
-    //               style: TextStyle(
-    //                 color: _bgColor,
-    //                 fontSize: 20,
-    //                 fontWeight: FontWeight.bold,
-    //               ),
-    //             ),
-    //             Text(
-    //               _month,
-    //               style: TextStyle(
-    //                 color: _bgColor,
-    //                 fontSize: 16,
-    //                 fontWeight: FontWeight.bold,
-    //               ),
-    //             ),
-    //           ],
-    //         ),
-    //       ),
-    //       title: Text(
-    //         _title,
-    //         style: TextStyle(
-    //           fontWeight: FontWeight.bold,
-    //           color: kTitleTextColor,
-    //         ),
-    //       ),
-    //       subtitle: Text(
-    //         _description,
-    //         style: TextStyle(
-    //           color: kTitleTextColor.withOpacity(0.7),
-    //         ),
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }
