@@ -10,4 +10,7 @@ With the solution, I have provided the following functionalities:
 - A demo feature to allow users to find and book sessions with licensed mental healthcare practitioners.
 
 ## Screenshots
-
+![Home Screen Furaha](home.jpeg)
+![Search Screen Furaha](read.jpeg)
+![Categories Screen Furaha](category.jpeg)
+![Doctor Screen Furaha](doctor.jpeg)
